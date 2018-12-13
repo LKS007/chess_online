@@ -67,3 +67,8 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-vkontakte'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.8'
+  gem 'coveralls', require: false
+end
