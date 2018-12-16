@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-vkontakte'

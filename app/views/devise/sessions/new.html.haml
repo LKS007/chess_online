@@ -1,0 +1,17 @@
+.login
+  .container
+    .form
+      %h1.login_header
+        Login
+      
+      = form_for(:user, url: user_session_path) do |f|
+        = f.email_field :email, placeholder: "Email"
+        = f.password_field :password, placeholder: "Password"
+        = f.submit "Log in", class: "btn-submit"
+
+      %ul.social-networks
+        %li.social_item
+          = link_to user_vkontakte_omniauth_authorize_path, class: "vk-network" do
+            .link_content
+              = image_tag "vk.png", :alt => "vk"
+

@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    p "Create"
+    p "HERE?!?!? CREATE?!?!"
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -32,7 +32,6 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
-        p "Here"
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -53,6 +52,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile_info
+    if current_user.nil?
+      redirect_to "/" and return 
+    end
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
@@ -64,17 +69,11 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      p "params before"
-      p params
-
-      params.require(:user).permit(:username, :nickname, :provider, :url)
-      p params
+      params.require(:user).permit(:username, :nickname, :email)
     end
 end
