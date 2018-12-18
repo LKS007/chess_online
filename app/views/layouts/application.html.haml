@@ -18,10 +18,11 @@
       %nav.navbar.navbar-inverse.navbar-static-top
         .container
           .navbar-header
+            = link_to start_game_path, :class => "navbar-brand" do
+              %span.glyphicon.glyphicon-tower
+              Start Game
             = link_to root_path, :class => "navbar-brand" do
               My App
-            = link_to start_game_path :class => "navbar-brand" do
-              Start Game
             %button.navbar-toggle.collapsed{"type"=>"button", "data-toggle"=>"collapse", "data-target"=>"#navbar6"}
               %span.sr-only
                 Toggle navigation

@@ -4,7 +4,7 @@ RSpec.describe GameController, type: :controller do
 
   describe "GET #start_game," do
     it "returns http success" do
-      get :start_game,
+      get :start_game
       expect(response).to have_http_status(:success)
     end
   end

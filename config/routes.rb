@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'game/start_game,'
+  get 'game/start_game', as: :start_game 
   get 'game/end_game'
   get '/' => 'welcome#index'
   get 'profile' => 'users#profile_info'
