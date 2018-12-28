@@ -1,0 +1,2 @@
+class GameStepsLog < ApplicationRecord
+end

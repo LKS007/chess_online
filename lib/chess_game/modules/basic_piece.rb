@@ -5,11 +5,15 @@ class BasicPiece
     @id = piece[:id]
     @color = piece[:color]
     @steps_count = piece[:steps_count]
-    @letters_coord = ('a'..'h').to_a
+    # @letters_coord = ('a'..'h').to_a
     @coordinates = piece[:coordinates]
-    @coordinates[1] = @letters_coord.index(@coordinates[1])
+    # @coordinates[1] = @letters_coord.index(@coordinates[1])
     @x_coord = @coordinates[1]
     @y_coord = @coordinates[0]
+
+    @en_passant = 0
+
+    @en_passant = piece[:en_passant] if (piece[:type] == :pawn)
   end
 
   def get_available_move

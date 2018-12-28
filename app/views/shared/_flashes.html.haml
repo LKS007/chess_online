@@ -1,0 +1,7 @@
+- flash.each do |key, message|
+  %div{ class: key == 'alert' ?  'alert alert-danger' : 'alert alert-success', role: "alert" }
+    %button.close{type: "button", "data-dismiss": "alert", "aria-label": "Close"}
+      %span{"aria-hidden": "true"}
+        &times;
+    %p
+      = message

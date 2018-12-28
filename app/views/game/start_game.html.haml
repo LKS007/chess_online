@@ -1,2 +1,12 @@
-%h1 Game#start_game,
-%p Find me in app/views/game/start_game,.html.haml
+.chess_debug_info
+  = #@available_steps.to_json
+  = #@pieces_collection.to_json
+
+.chess_field__wrapper
+  = react_component("ChessField", { current_step: @current_step,
+                    pieces_collection: @pieces_collection,
+                    available_steps: @available_steps,
+                    gameId: @game_id,
+                    whosMove: @whos_move,
+                    player_color: @player_color })
+  =# react_component("ChessPieces", {pieces_collection: @pieces_collection})

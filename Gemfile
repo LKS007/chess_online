@@ -72,3 +72,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'coveralls', require: false
 end
+
+gem 'react-rails'

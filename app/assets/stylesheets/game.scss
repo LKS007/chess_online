@@ -1,3 +1,60 @@
 // Place all the styles related to the game controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chess_debug_info {
+  font-size: 12px;
+}
+
+.chess_field__wrapper {
+
+  padding: 0px 20px;
+  max-width: 500px;
+  margin: auto;
+
+  
+  .piece_div {
+    height: 100%;
+  }
+
+  .chess_cell {
+    //display: inline-block;
+    float: left;
+    width: 12.5%;
+    height: 12.5%;
+    //border-bottom: 1px solid;
+    //border-right: 1px solid;
+  }
+
+  .chess_cell.activeCell {
+    border: gold 3px solid;
+  }
+
+  .chess_cell.canMoveCell {
+    border: green 3px solid;
+  }
+
+  .chess_cell.canEatCell {
+    border: red 3px solid;
+  }
+
+  .chess_cell.darkCell {
+    background-color: rgb(181, 136, 99);
+    //background-color: #4e769c;
+
+  }
+
+  .chess_cell.lightCell {
+    background-color: rgb(240, 217, 181);
+    //background-color: #ece8d2;
+  }
+}
+
+
+//CSS FOR FIGURES
+.cell_with_figure {
+  .piece_div {
+
+  }
+}
+
